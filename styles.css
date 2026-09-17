@@ -220,18 +220,18 @@ textarea {
   z-index: 2;
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(4.1rem, 7vw, 10rem);
-  line-height: 0.68;
+  font-size: clamp(3.2rem, 5.7vw, 8.6rem);
+  line-height: 0.62;
   letter-spacing: -0.06em;
   font-weight: 700;
   color: #fffaf5;
   text-shadow: 0 2px 18px rgba(14, 9, 7, 0.55), 0 0 28px rgba(255, 250, 245, 0.18);
-  max-width: 1000px;
+  max-width: 980px;
 }
 
 .hero-copy h1 span {
   display: inline-block;
-  margin-top: 0.12rem;
+  margin-top: 0.08rem;
   font-weight: 600;
 }
 
