@@ -220,7 +220,7 @@ textarea {
   z-index: 2;
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3.5rem, 6vw, 9.2rem);
+  font-size: clamp(2.8rem, 4.7vw, 7.4rem);
   line-height: 0.7;
   letter-spacing: -0.06em;
   font-weight: 700;
@@ -229,7 +229,7 @@ textarea {
   max-width: 980px;
   display: flex;
   flex-direction: column;
-  gap: 0.08em;
+  gap: 0.06em;
 }
 
 .hero-copy .title-line {
@@ -801,18 +801,23 @@ label {
   display: grid;
   gap: 0.45rem;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(17, 12, 10, 0.82);
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(17, 12, 10, 0.18);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--text);
+  background: rgba(255, 255, 255, 0.32);
+  color: #120d0b;
   padding: 0.9rem 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(17, 12, 10, 0.52);
 }
 
 textarea {
