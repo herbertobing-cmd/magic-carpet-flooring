@@ -220,8 +220,8 @@ textarea {
   z-index: 2;
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(5rem, 9vw, 10.5rem);
-  line-height: 0.7;
+  font-size: clamp(4.2rem, 7.4vw, 8.6rem);
+  line-height: 0.72;
   letter-spacing: -0.06em;
   font-weight: 700;
   color: #fffaf5;
