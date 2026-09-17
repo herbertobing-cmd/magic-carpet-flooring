@@ -196,7 +196,14 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(10, 6, 5, 0.72) 0%, rgba(10, 6, 5, 0.44) 28%, rgba(10, 6, 5, 0.12) 54%, rgba(10, 6, 5, 0) 72%);
+  background: linear-gradient(
+    90deg,
+    rgba(10, 6, 5, 0.86) 0%,
+    rgba(10, 6, 5, 0.74) 22%,
+    rgba(10, 6, 5, 0.48) 40%,
+    rgba(10, 6, 5, 0.18) 62%,
+    rgba(10, 6, 5, 0) 100%
+  );
   pointer-events: none;
 }
 
@@ -225,7 +232,7 @@ textarea {
   letter-spacing: -0.06em;
   font-weight: 700;
   color: #fffaf5;
-  text-shadow: 0 2px 18px rgba(14, 9, 7, 0.55), 0 0 28px rgba(255, 250, 245, 0.18);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 22px rgba(255, 245, 235, 0.18);
   max-width: 980px;
   display: flex;
   flex-direction: column;
@@ -717,6 +724,7 @@ textarea {
 
 .catalog-card > div:last-child {
   padding: 2rem 1.5rem;
+  color: var(--text);
 }
 
 .services-grid {
