@@ -211,7 +211,7 @@ textarea {
 .hero-copy {
   position: relative;
   z-index: 1;
-  max-width: 560px;
+  max-width: 1000px;
   padding-top: 3rem;
 }
 
@@ -220,17 +220,19 @@ textarea {
   z-index: 2;
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(4.2rem, 7.4vw, 8.6rem);
-  line-height: 0.72;
+  font-size: clamp(4.1rem, 7vw, 10rem);
+  line-height: 0.68;
   letter-spacing: -0.06em;
   font-weight: 700;
   color: #fffaf5;
   text-shadow: 0 2px 18px rgba(14, 9, 7, 0.55), 0 0 28px rgba(255, 250, 245, 0.18);
+  max-width: 1000px;
 }
 
 .hero-copy h1 span {
   display: inline-block;
-  margin-top: 0.2rem;
+  margin-top: 0.12rem;
+  font-weight: 600;
 }
 
 .lead {
