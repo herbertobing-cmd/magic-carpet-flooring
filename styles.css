@@ -1,0 +1,901 @@
+:root {
+  --bg-dark: #1b120d;
+  --bg-deep: #150d0a;
+  --bg-soft: #f4efe9;
+  --bg-warm: #e9dcc7;
+  --card: rgba(255, 255, 255, 0.08);
+  --panel: #efe7df;
+  --text: #f6efe8;
+  --text-dark: #1b120d;
+  --muted: #dccbb7;
+  --line: rgba(255, 255, 255, 0.18);
+  --gold: #d9c2a3;
+  --gold-strong: #cfad7d;
+  --accent: #d9c0a0;
+  --button: #f4efe8;
+  --shadow: rgba(17, 9, 7, 0.28);
+  --max-width: 1240px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(182, 132, 86, 0.18), transparent 29%),
+    linear-gradient(180deg, #1d140f 0%, #160e0a 100%);
+  color: var(--text);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.narrow {
+  max-width: 900px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(20, 12, 10, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 0.85;
+  letter-spacing: 0.08em;
+}
+
+.brand-mark {
+  font-size: clamp(0.9rem, 1vw, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+}
+
+.brand-sub {
+  font-size: clamp(0.52rem, 0.8vw, 0.7rem);
+  letter-spacing: 0.42em;
+  opacity: 0.8;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-nav a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.main-nav a:hover,
+.footer-links a:hover,
+.text-link:hover {
+  color: var(--gold);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 28px rgba(18, 10, 7, 0.18);
+}
+
+.button--small {
+  padding: 0.8rem 1.35rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.button--small:hover {
+  background: rgba(219, 184, 142, 0.16);
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #f6efe8 0%, #e2d2bb 100%);
+  color: var(--text-dark);
+  font-weight: 700;
+  padding: 1.15rem 2.2rem;
+  box-shadow: 0 10px 24px rgba(15, 9, 7, 0.18);
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #ebd7b5 100%);
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.eyebrow--dark {
+  color: rgba(27, 18, 13, 0.68);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(43, 28, 21, 0.72), rgba(39, 28, 22, 0.4) 38%, rgba(39, 28, 22, 0.12) 58%, rgba(39, 28, 22, 0.02)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(17, 10, 8, 0.12)),
+    url("assets/storefront.jpg") center/cover no-repeat;
+  min-height: 760px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(28, 18, 15, 0.26), transparent 58%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 760px;
+  gap: 3rem;
+}
+
+.hero-copy {
+  max-width: 560px;
+  padding-top: 3rem;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(5rem, 9vw, 10.5rem);
+  line-height: 0.7;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+  color: #fffaf5;
+  text-shadow: 0 2px 10px rgba(14, 9, 7, 0.28);
+}
+
+.hero-copy h1 span {
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+
+.lead {
+  max-width: 540px;
+  margin-top: 1.4rem;
+  color: rgba(255, 248, 242, 0.92);
+  font-size: 1.15rem;
+  text-shadow: 0 1px 8px rgba(14, 9, 7, 0.24);
+}
+
+.cta-row {
+  margin-top: 2rem;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 560px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-plate {
+  display: none;
+}
+
+.features,
+.section {
+  position: relative;
+  padding: 6rem 0;
+}
+
+.features {
+  background: linear-gradient(180deg, rgba(26, 18, 14, 0.15), rgba(26, 18, 14, 0.35));
+}
+
+.feature-grid,
+.values-grid,
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card,
+.value-card,
+.service-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 2rem 1.5rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 20px rgba(15, 9, 7, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.feature-card:hover,
+.value-card:hover,
+.service-card:hover,
+.product-card:hover,
+.catalog-card:hover,
+.contact-form:hover,
+.info-card:hover,
+.cta-banner:hover {
+  transform: translateY(-6px);
+  border-color: rgba(217, 194, 163, 0.65);
+  box-shadow: 0 22px 38px rgba(0, 0, 0, 0.16);
+}
+
+.feature-number {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+}
+
+.feature-card h3,
+.value-card h3,
+.service-card h3,
+.product-copy h3,
+.catalog-card h3,
+.info-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.5rem, 2vw, 2.05rem);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
+
+.feature-card p,
+.value-card p,
+.service-card p,
+.product-copy p,
+.catalog-card p,
+.intro-copy p,
+.contact-info li,
+.service-process li,
+.info-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.section--light {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(243, 233, 223, 0.94)),
+    linear-gradient(180deg, #f7f0e8 0%, #efe3d6 100%);
+  color: var(--text-dark);
+  border-top: 1px solid rgba(90, 64, 40, 0.08);
+  border-bottom: 1px solid rgba(90, 64, 40, 0.08);
+}
+
+.section--light p,
+.section--light li,
+.section--light h2,
+.section--light h3 {
+  color: var(--text-dark);
+}
+
+.stats-strip {
+  background:
+    linear-gradient(90deg, rgba(20, 13, 10, 0.96), rgba(33, 22, 17, 0.9)),
+    url("assets/wood-samples.jpg") center/cover no-repeat;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-box {
+  padding: 2.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(217, 194, 163, 0.6);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+}
+
+.stat-box span {
+  display: block;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-family: "Cormorant Garamond", serif;
+  color: #f4ebdf;
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.stat-box p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+}
+
+.intro-block {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.section-heading {
+  max-width: 620px;
+}
+
+.section-heading h2,
+.service-process h2,
+.split-panel h2,
+.page-hero h1,
+.contact-info h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.section-heading--split {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.text-link {
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card,
+.catalog-card {
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(31, 22, 17, 0.94), rgba(20, 14, 12, 1));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.product-image {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.product-card:hover .product-image,
+.catalog-card:hover .catalog-visual {
+  transform: scale(1.04);
+  filter: saturate(1.08);
+}
+
+.product-card--wood .product-image {
+  background-image: url("assets/wood-samples.jpg");
+}
+
+.product-card--stone .product-image {
+  background-image: url("assets/laminate-closeup.jpg");
+}
+
+.product-card--carpet .product-image {
+  background-image: url("assets/living-room-rug.jpg");
+}
+
+.product-copy {
+  padding: 1.5rem;
+}
+
+.section--dark {
+  background:
+    linear-gradient(135deg, rgba(53, 32, 22, 0.68), rgba(23, 15, 12, 0.94)),
+    url("assets/wood-samples.jpg") center/cover no-repeat;
+  color: var(--text);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.split-panel {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.process-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.process-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.process-list strong {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.2rem 2.5rem;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cta-banner .eyebrow {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-banner h2 {
+  color: #fff;
+}
+
+.site-footer {
+  padding: 2.5rem 0 3rem;
+  background: #120d0b;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.page-hero {
+  position: relative;
+  padding: 7rem 0 4rem;
+  background:
+    linear-gradient(135deg, rgba(22, 14, 10, 0.82), rgba(22, 14, 10, 0.58)),
+    url("assets/living-room-rug.jpg") center/cover no-repeat;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(196, 144, 94, 0.06), transparent 35%, rgba(196, 144, 94, 0.12));
+}
+
+.page-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero h1 {
+  max-width: 760px;
+}
+
+.two-column,
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.values-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.metrics-grid span {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: "Cormorant Garamond", serif;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.showcase-section {
+  background:
+    linear-gradient(180deg, rgba(30, 22, 18, 0.1), rgba(30, 22, 18, 0.2)),
+    url("assets/laminate-closeup.jpg") center/cover no-repeat;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.showcase-copy {
+  max-width: 520px;
+}
+
+.showcase-copy h2 {
+  margin: 0 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.mini-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.8rem;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.mini-list li::before {
+  content: "•";
+  color: var(--gold);
+  margin-right: 0.7rem;
+}
+
+.showcase-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.showcase-card {
+  min-height: 360px;
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.22);
+}
+
+.showcase-card--one {
+  background-image: url("assets/wood-samples.jpg");
+}
+
+.showcase-card--two {
+  background-image: url("assets/living-room-rug.jpg");
+  margin-top: 2.4rem;
+}
+
+.showcase-card--three {
+  background-image: url("assets/laminate-closeup.jpg");
+}
+
+.product-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.catalog-card {
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) 1fr;
+  min-height: 220px;
+}
+
+.catalog-visual {
+  min-height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.catalog-visual--oak {
+  background-image: url("assets/wood-samples.jpg");
+}
+
+.catalog-visual--vinyl {
+  background-image: url("assets/laminate-closeup.jpg");
+}
+
+.catalog-visual--laminate {
+  background-image: url("assets/wood-samples.jpg");
+}
+
+.catalog-visual--carpet {
+  background-image: url("assets/living-room-rug.jpg");
+}
+
+.catalog-card > div:last-child {
+  padding: 2rem 1.5rem;
+}
+
+.services-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-process {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.service-process ol {
+  margin: 0;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  padding: 2rem 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(217, 194, 163, 0.7);
+  box-shadow: 0 22px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card p {
+  margin: 0 0 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.person {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.person strong {
+  color: var(--text);
+}
+
+.person span {
+  color: var(--gold);
+  font-size: 0.82rem;
+}
+
+.contact-form,
+.info-card {
+  padding: 2rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  padding: 0.9rem 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .intro-block,
+  .split-panel,
+  .two-column,
+  .service-process,
+  .contact-layout,
+  .product-grid,
+  .feature-grid,
+  .values-grid,
+  .services-grid,
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-wrap,
+  .footer-wrap,
+  .cta-banner,
+  .section-heading--split {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-grid {
+    min-height: 620px;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: min(var(--max-width), calc(100% - 1.25rem));
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .nav-wrap {
+    padding: 1rem 0;
+  }
+
+  .main-nav {
+    font-size: 0.82rem;
+  }
+
+  .brand-mark {
+    letter-spacing: 0.18em;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.7rem, 18vw, 6rem);
+  }
+
+  .feature-card,
+  .value-card,
+  .service-card,
+  .contact-form,
+  .info-card {
+    padding: 1.4rem 1rem;
+  }
+
+  .catalog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
