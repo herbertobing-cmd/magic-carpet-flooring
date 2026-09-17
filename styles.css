@@ -741,6 +741,13 @@ textarea {
   color: #ffffff;
 }
 
+/* Stronger override for cards inside light sections to prevent earlier rules from darkening text */
+.section--light .catalog-card p,
+.section--light .catalog-card .eyebrow--dark {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
 .services-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
