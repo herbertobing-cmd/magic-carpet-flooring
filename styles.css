@@ -724,7 +724,16 @@ textarea {
 
 .catalog-card > div:last-child {
   padding: 2rem 1.5rem;
-  color: var(--text);
+  color: #ffffff;
+}
+
+/* Ensure eyebrow and headings inside catalog cards are readable on dark background */
+.catalog-card .eyebrow--dark {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.catalog-card h3 {
+  color: #ffffff;
 }
 
 .services-grid {
