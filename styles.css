@@ -85,6 +85,16 @@ textarea {
   letter-spacing: 0.08em;
 }
 
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.brand--footer .brand-logo {
+  height: 32px;
+}
+
 .brand-mark {
   font-size: clamp(0.9rem, 1vw, 1.15rem);
   font-weight: 700;
