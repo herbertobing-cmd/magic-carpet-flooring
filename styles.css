@@ -736,6 +736,11 @@ textarea {
   color: #ffffff;
 }
 
+/* Ensure paragraph/subtext inside catalog cards is white */
+.catalog-card p {
+  color: #ffffff;
+}
+
 .services-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
