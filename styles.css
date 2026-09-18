@@ -95,6 +95,20 @@ textarea {
   height: 140px;
 }
 
+/* Header-specific adjustments: keep header logo upright and centered */
+.site-header .brand {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-header .brand-logo {
+  transform: none !important;
+  object-fit: contain;
+  object-position: center;
+  align-self: center;
+}
+
 .brand-mark {
   font-size: clamp(0.9rem, 1vw, 1.15rem);
   font-weight: 700;
