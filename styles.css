@@ -260,11 +260,11 @@ textarea {
   gap: 0.06em;
 }
 
-/* Keep each title line on a single line so the hero stays exactly two lines */
 .hero-title .title-line {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 /* Responsive: mobile and tablet adjustments */
