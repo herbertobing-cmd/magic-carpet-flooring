@@ -231,6 +231,11 @@ textarea {
   pointer-events: none;
 }
 
+.hero .container {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .hero-grid {
   display: grid;
   align-items: center;
@@ -291,6 +296,11 @@ textarea {
     font-size: 0.95rem;
   }
 
+  .hero .container {
+    padding-top: 2.25rem;
+    padding-bottom: 1.75rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     min-height: 420px;
@@ -304,7 +314,7 @@ textarea {
   }
 
   .hero-copy {
-    padding-top: 3.8rem;
+    padding-top: 4.8rem;
   }
 
   .hero-title .title-line {
@@ -811,7 +821,7 @@ textarea {
 
 .showcase-section {
   background:
-    linear-gradient(180deg, rgba(30, 22, 18, 0.1), rgba(30, 22, 18, 0.2)),
+    linear-gradient(180deg, rgba(22, 16, 12, 0.18), rgba(22, 16, 12, 0.32)),
     url("assets/laminate-closeup.jpg") center/cover no-repeat;
 }
 
@@ -824,6 +834,9 @@ textarea {
 
 .showcase-copy {
   max-width: 520px;
+  position: relative;
+  z-index: 1;
+  padding: 0.25rem 0.6rem 0.25rem 0;
 }
 
 .showcase-copy h2 {
@@ -832,6 +845,7 @@ textarea {
   font-size: clamp(2.8rem, 5vw, 4.2rem);
   line-height: 0.96;
   letter-spacing: -0.04em;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.42), 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
 .mini-list {
