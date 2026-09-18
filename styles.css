@@ -249,6 +249,13 @@ textarea {
   gap: 0.06em;
 }
 
+/* Keep each title line on a single line so the hero stays exactly two lines */
+.hero-title .title-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .hero-copy .title-line {
   display: block;
   font-weight: 700;
