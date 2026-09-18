@@ -278,7 +278,8 @@ textarea {
 
   .hero-copy h1 {
     font-size: clamp(2.6rem, 10vw, 4rem);
-    line-height: 0.76;
+    line-height: 0.65;
+    gap: 0.14em;
   }
 
   .main-nav {
@@ -433,7 +434,8 @@ textarea {
 
   .hero-copy h1 {
     font-size: clamp(1.6rem, 9vw, 2.6rem);
-    line-height: 1;
+    line-height: 0.75;
+    gap: 0.18em;
   }
 
   .brand-logo {
