@@ -325,7 +325,7 @@ textarea {
   }
 
   .hero-copy {
-    padding-top: 9.2rem;
+    padding-top: 10.5rem;
   }
 
   .hero-title .title-line {
@@ -473,7 +473,7 @@ textarea {
 
 @media (max-width: 900px) {
   .cta-row {
-    margin-top: 2.8rem;
+    margin-top: 3.6rem;
   }
 }
 
