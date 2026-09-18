@@ -221,10 +221,10 @@ textarea {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(10, 6, 5, 0.2) 0%,
+    rgba(10, 6, 5, 0.24) 0%,
     rgba(10, 6, 5, 0.18) 30%,
     rgba(10, 6, 5, 0.08) 60%,
-    rgba(10, 6, 5, 0.04) 100%
+    rgba(10, 6, 5, 0.03) 100%
   );
   pointer-events: none;
 }
@@ -301,7 +301,14 @@ textarea {
   }
 
   .hero::before {
-    display: none;
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 6, 5, 0.3) 0%,
+      rgba(10, 6, 5, 0.18) 32%,
+      rgba(10, 6, 5, 0.08) 70%,
+      rgba(10, 6, 5, 0.02) 100%
+    );
   }
 
   .hero .container {
@@ -1128,7 +1135,14 @@ textarea {
   }
 
   .hero::before {
-    display: none;
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 6, 5, 0.32) 0%,
+      rgba(10, 6, 5, 0.16) 32%,
+      rgba(10, 6, 5, 0.08) 72%,
+      rgba(10, 6, 5, 0.02) 100%
+    );
   }
 
   .hero-grid {
