@@ -219,13 +219,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 6, 5, 0.24) 0%,
-    rgba(10, 6, 5, 0.18) 30%,
-    rgba(10, 6, 5, 0.08) 60%,
-    rgba(10, 6, 5, 0.03) 100%
-  );
+  background: none;
   pointer-events: none;
 }
 
@@ -304,12 +298,12 @@ textarea {
     display: block;
     background: linear-gradient(
       90deg,
-      rgba(8, 5, 4, 0.28) 0%,
-      rgba(8, 5, 4, 0.18) 24%,
-      rgba(8, 5, 4, 0.08) 42%,
+      rgba(8, 5, 4, 0.7) 0%,
+      rgba(8, 5, 4, 0.52) 22%,
+      rgba(8, 5, 4, 0.18) 42%,
       rgba(8, 5, 4, 0) 72%
     );
-    box-shadow: none;
+    box-shadow: inset 120px 0 90px rgba(0, 0, 0, 0.18);
   }
 
   .hero .container {
@@ -1140,12 +1134,12 @@ textarea {
     display: block;
     background: linear-gradient(
       90deg,
-      rgba(8, 5, 4, 0.28) 0%,
-      rgba(8, 5, 4, 0.18) 24%,
-      rgba(8, 5, 4, 0.08) 42%,
+      rgba(8, 5, 4, 0.7) 0%,
+      rgba(8, 5, 4, 0.52) 22%,
+      rgba(8, 5, 4, 0.18) 42%,
       rgba(8, 5, 4, 0) 72%
     );
-    box-shadow: none;
+    box-shadow: inset 120px 0 90px rgba(0, 0, 0, 0.18);
   }
 
   .hero-grid {
