@@ -321,6 +321,7 @@ textarea {
     grid-template-columns: 1fr;
     min-height: 360px;
     gap: 1rem;
+    align-items: end;
   }
 
   .hero-visual {
@@ -330,7 +331,7 @@ textarea {
   }
 
   .hero-copy {
-    padding-top: 3.8rem;
+    padding-top: 5.5rem;
   }
 
   .hero-title .title-line {
