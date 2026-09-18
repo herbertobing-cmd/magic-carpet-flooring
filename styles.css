@@ -297,8 +297,7 @@ textarea {
   }
 
   .hero .container {
-    padding-top: 1.5rem;
-    padding-bottom: 0.9rem;
+    padding: 0.9rem 0.8rem 0.75rem;
   }
 
   .hero-grid {
