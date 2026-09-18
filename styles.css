@@ -468,7 +468,13 @@ textarea {
 }
 
 .cta-row {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .cta-row {
+    margin-top: 1.2rem;
+  }
 }
 
 .hero-visual {
