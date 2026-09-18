@@ -320,6 +320,61 @@ textarea {
   .brand--footer .brand-logo {
     height: 64px;
   }
+
+  /* Mobile nav toggle */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-toggle-label span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    position: relative;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+  }
+
+  .nav-toggle-label span::before { top: -7px; }
+  .nav-toggle-label span::after { top: 7px; }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .main-nav {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 0.5rem 0.25rem;
+  }
 }
 
 @media (max-width: 480px) {
