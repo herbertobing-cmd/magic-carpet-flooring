@@ -296,13 +296,14 @@ textarea {
     font-size: 0.95rem;
   }
 
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(16, 12, 10, 0.12), rgba(16, 12, 10, 0.08)),
+      url("http://thesolesurvivors.com/wp-content/uploads/2026/09/ChatGPT-Image-Sep-18-2026-03_02_35-AM-1.png") center/cover no-repeat;
+  }
+
   .hero::before {
-    background: linear-gradient(
-      180deg,
-      rgba(10, 6, 5, 0.28) 0%,
-      rgba(10, 6, 5, 0.18) 32%,
-      rgba(10, 6, 5, 0.08) 100%
-    );
+    display: none;
   }
 
   .hero .container {
@@ -1123,18 +1124,13 @@ textarea {
 
   .hero {
     min-height: 760px;
-    background-position: center center;
+    background:
+      linear-gradient(180deg, rgba(16, 12, 10, 0.1), rgba(16, 12, 10, 0.06)),
+      url("http://thesolesurvivors.com/wp-content/uploads/2026/09/ChatGPT-Image-Sep-18-2026-03_02_35-AM-1.png") center center/cover no-repeat;
   }
 
   .hero::before {
-    background: linear-gradient(
-      90deg,
-      rgba(10, 6, 5, 0.82) 0%,
-      rgba(10, 6, 5, 0.64) 26%,
-      rgba(10, 6, 5, 0.42) 52%,
-      rgba(10, 6, 5, 0.2) 76%,
-      rgba(10, 6, 5, 0.08) 100%
-    );
+    display: none;
   }
 
   .hero-grid {
