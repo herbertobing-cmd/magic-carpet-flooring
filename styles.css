@@ -210,7 +210,7 @@ textarea {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(18, 12, 10, 0.10), rgba(18, 12, 10, 0.04)),
+    linear-gradient(180deg, rgba(18, 12, 10, 0.18), rgba(18, 12, 10, 0.08)),
     url("http://thesolesurvivors.com/wp-content/uploads/2026/09/ChatGPT-Image-Sep-18-2026-03_02_35-AM-1.png") center/cover no-repeat;
   min-height: 760px;
 }
@@ -219,7 +219,13 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  display: none;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 6, 5, 0.2) 0%,
+    rgba(10, 6, 5, 0.18) 30%,
+    rgba(10, 6, 5, 0.08) 60%,
+    rgba(10, 6, 5, 0.04) 100%
+  );
   pointer-events: none;
 }
 
