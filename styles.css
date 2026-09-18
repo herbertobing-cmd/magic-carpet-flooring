@@ -222,11 +222,11 @@ textarea {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(10, 6, 5, 0.9) 0%,
-    rgba(10, 6, 5, 0.75) 22%,
-    rgba(10, 6, 5, 0.5) 40%,
-    rgba(10, 6, 5, 0.28) 62%,
-    rgba(10, 6, 5, 0.1) 100%
+    rgba(10, 6, 5, 0.68) 0%,
+    rgba(10, 6, 5, 0.42) 24%,
+    rgba(10, 6, 5, 0.22) 42%,
+    rgba(10, 6, 5, 0.12) 62%,
+    rgba(10, 6, 5, 0.06) 100%
   );
   pointer-events: none;
 }
@@ -294,6 +294,15 @@ textarea {
     flex-wrap: wrap;
     gap: 0.6rem;
     font-size: 0.95rem;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 6, 5, 0.28) 0%,
+      rgba(10, 6, 5, 0.18) 32%,
+      rgba(10, 6, 5, 0.08) 100%
+    );
   }
 
   .hero .container {
