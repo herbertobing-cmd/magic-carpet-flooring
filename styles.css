@@ -325,11 +325,15 @@ textarea {
   }
 
   .hero-copy {
-    padding-top: 10.5rem;
+    padding-top: 12rem;
   }
 
   .hero-title .title-line {
     white-space: normal;
+  }
+
+  .lead {
+    margin-top: 1.8rem;
   }
 
   .product-grid,
@@ -473,7 +477,7 @@ textarea {
 
 @media (max-width: 900px) {
   .cta-row {
-    margin-top: 3.6rem;
+    margin-top: 4.4rem;
   }
 }
 
